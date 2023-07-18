@@ -1,0 +1,17 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#map {
+  height: 100vh;
+}
+
+.custom-marker {
+  width: 15px;  /* Adjust the size as desired */
+  height: 15px; /* Adjust the size as desired */
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid red;
+}
