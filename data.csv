@@ -1,0 +1,6 @@
+latitude,longitude,name,type,status,colour
+64.133,-21.898,101000,Fluorescent,on,pink
+64.12922977859282,-21.918903438751514,101001,LED,off,red
+64.133,-21.88,Light 101002,LED,on,blue
+64.12,-21.898,101003,Halogen,on,green
+64.129327,-21.8183472,101004,Mercury,off,purple
