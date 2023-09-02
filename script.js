@@ -51,21 +51,35 @@ map.on('zoomend', function() {
   adjustMarkerStyle();
 });
 
-// Fetching the CSV data and adding points to the map (assuming CSV is properly formatted)
+// Fetching the CSV data and setting initial marker style
+let initialZoom = map.getZoom();
+
+function getInitialStyle() {
+    if (initialZoom <= 14) {
+        return {
+            radius: 2,
+            weight: 0
+        };
+    } else {
+        return {
+            radius: 5,
+            weight: 1
+        };
+    }
+}
+
 fetch('data.csv')
   .then(response => response.text())
   .then(data => {
-    const lines = data.split('\n').slice(1);  // Split by lines and ignore the header
+    const lines = data.split('\n').slice(1);
     lines.forEach(line => {
       const [lat, lon, name, type, status, colour] = line.split(',');
       if (lat && lon) {
         const marker = L.circleMarker([parseFloat(lat), parseFloat(lon)], {
-          color: colour.trim(),
-          radius: 5
+          ...getInitialStyle(),
+          color: colour.trim()
         }).bindPopup(`<b>${name.trim()}</b><br>Type: ${type.trim()}<br>Status: ${status.trim()}`).addTo(map);
         markers.push(marker);
       }
     });
-    adjustMarkerStyle();  // Make dots appear according to zoom level
-
   });
