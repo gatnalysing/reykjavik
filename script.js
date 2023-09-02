@@ -5,6 +5,7 @@ L.Control.ZoomLabel = L.Control.extend({
   },
   onAdd: function(map) {
     this._container = L.DomUtil.create('div', 'leaflet-control-zoomlabel');
+    L.DomUtil.setStyle(this._container, 'font-size', '20px');
     this.update();
     return this._container;
   },
