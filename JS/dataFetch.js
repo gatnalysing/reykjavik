@@ -15,18 +15,29 @@ function getInitialStyle() {
 }
 
 function processCSVData(data) {
-    const lines = data.split('\n').slice(1);
-    lines.forEach(line => {
-        const [lat, lon, name, type, status, colour] = line.split(',');
-        if (lat && lon) {
-            const marker = L.circleMarker([parseFloat(lat), parseFloat(lon)], {
+    const lines = data.split('\n');
+    const header = lines[0].split(','); // Extract the header
+    lines.slice(1).forEach(line => {
+        const values = line.split(',');
+        if (values[0] && values[1]) { // Check for latitude and longitude
+            const popupContent = header.reduce((content, columnName, index) => {
+                // Skip lat, lon, and colour for the popup
+                if(columnName.trim() !== 'latitude' && columnName.trim() !== 'longitude' && columnName.trim() !== 'colour') {
+                    content += `<b>${columnName.trim()}:</b> ${values[index].trim()}<br>`;
+                }
+                return content;
+            }, '');
+            
+            const marker = L.circleMarker([parseFloat(values[0]), parseFloat(values[1])], {
                 ...getInitialStyle(),
-                color: colour.trim()
-            }).bindPopup(`<b>${name.trim()}</b><br>Type: ${type.trim()}<br>Status: ${status.trim()}`).addTo(map);
+                color: values[header.indexOf('colour')].trim() // Assumes 'colour' is always present
+            }).bindPopup(popupContent).addTo(map);
+
             markers.push(marker);
         }
     });
 }
+
 
 // First, fetch the layers.csv to decide which files to fetch
 fetch('DATA/layers.csv')

@@ -1,6 +1,7 @@
 latitude,longitude,name,type,status,colour
-64.133,-21.898,101000,Fluorescent,on,pink
-64.12922977859282,-21.918903438751514,101001,LED,off,red
-64.133,-21.88,Light 101002,LED,on,blue
-64.12,-21.898,101003,Halogen,on,green
-64.129327,-21.8183472,101004,Mercury,off,purple
+64.133,-21.898,101000,Skápur 1001,on,black
+64.12922978,-21.91890344,101001,Skápur 1002,off,black
+64.133,-21.88,Light 101002,Skápur 1003,on,black
+64.12,-21.898,101003,Skápur 1004,on,black
+64.129327,-21.8183472,101004,Skápur 1005,off,black
+64.1460226,-21.8343316,Light 174780,Skápur 1006,off,black
