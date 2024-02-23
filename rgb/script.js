@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.addEventListener('click', function() {
         const selectedColor = colorValueDisplay.innerText; // Get the selected color hex value
         const brightness = brightnessValueDisplay.innerText; // Get the brightness value
-        fetch('http://10.0.0.31:5000/sendColor', {  // Replace with your Flask backend URL
+        fetch('https://rvk.netport.is', {  
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
