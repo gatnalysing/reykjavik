@@ -30,8 +30,13 @@ body {
 }
 
 #submitBtn {
-    display: block;
-    margin: 20px auto; /* Centers the button below the slider */
+    font-size: 24px; /* Larger text size */
+    padding: 15px 30px; /* Larger padding for bigger button */
+    width: auto; /* Adjust width as needed, or use 'auto' for automatic sizing based on content */
+    height: auto; /* Adjust height as needed, or use 'auto' */
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    display: block; /* Ensure the button is block level for width to take effect */
+    margin: 20px auto; /* Keep the button centered */
 }
 
 #colorValue {
