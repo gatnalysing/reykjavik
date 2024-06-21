@@ -1,0 +1,1 @@
+Ný skrá fyrir MM
