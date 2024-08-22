@@ -16,7 +16,7 @@ button.innerHTML = 'MENNINGARNÓTT';
 // Set the button styles
 button.style.position = 'absolute';
 button.style.top = '10px';
-button.style.left = '10px';
+button.style.right = '10px';
 button.style.backgroundColor = '#4CAF50'; // Green background
 button.style.color = 'white'; // White text
 button.style.padding = '15px 25px'; // Padding
