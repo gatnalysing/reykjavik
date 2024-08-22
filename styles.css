@@ -17,24 +17,3 @@ body, html {
     font-weight: bold; /* make text bold */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* subtle shadow for depth */
 }
-
-.menningarnott-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 15px 25px; /* Padding */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Bold text */
-    border: none; /* No border */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center; /* Center text */
-    text-decoration: none; /* No underline */
-    cursor: pointer; /* Pointer cursor on hover */
-    z-index: 1000; /* Ensure it is on top of the map */
-}
-
-.menningarnott-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
