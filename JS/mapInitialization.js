@@ -9,9 +9,9 @@ let zoomLabelControl = new L.Control.ZoomLabel().addTo(map);
 
 // Create the button element
 const button = L.DomUtil.create('a', 'menningarnott-button', map.getContainer());
-button.href = 'https://menningarnott.gatnalysing.is';
+button.href = 'https://styring.gatnalysing.is';
 button.target = '_blank';
-button.innerHTML = 'MENNINGARNÓTT';
+button.innerHTML = 'STÝRING';
 
 // Set the button styles
 button.style.position = 'absolute';
